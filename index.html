@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta property="og:url" content="https://mario-lopez.github.io/Petdopcion" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Petdopcion" />
+    <meta property="og:description" content="Hi! Petdopcion is a pet adoption website" />
+    <meta property="og:image" content="	https://mario-lopez.github.io/Petdopcion/img/previsualizacion.png" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinaria</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Bayon&family=Nosifer&family=Titan+One&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/animate.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+        integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+</head>
+
+<script type="text/javascript">
+    window.onload = setTimeout(function () {
+        var top = document.getElementById("top");
+        var bottom = document.getElementById("bottom");
+        var elem = document.getElementById("bar");
+        var width = 10;
+        var id = setInterval(frame, 14);
+        function frame() {
+            if (width >= 100) {
+                clearInterval(id);
+                top.style.height = "0";
+                top.style.opacity = "0";
+                top.style.visibility = "hidden";
+                bottom.style.height = "0";
+                bottom.style.opacity = "0";
+                bottom.style.visibility = "hidden";
+                document.getElementById("divCarga").style.visibility = "hidden";
+                setTimeout(changeColor, 300);
+            } else {
+                width++;
+                elem.style.width = width + '%';
+            }
+        }
+    }, 1000)
+    function changeColor() {
+        document.getElementById("textAnima").style.opacity = "1";
+        document.getElementById("textAnima").style.transform = "translateY(0px)"
+    }
+</script>
+
+<body>
+    <div id="divCarga">
+        <div id="top">
+            <img src="https://i.ibb.co/sQgnYR9/logo1.png">
+            <div id="content-bar">
+                <div id="bar"></div>
+            </div>
+        </div>
+        <div id="bottom">
+            <h5>Bienvenidos...</h5>
+        </div>
+    </div>
+
+    <div class="content-menu-movil" id="contentmenuMovil" onclick="cerrarMenu()">
+        <div class="menu-movil" id="menuMovil">
+            <div class="menu-movil-logo">
+                <img src="https://i.ibb.co/sQgnYR9/logo1.png">
+            </div>
+            <main class="menu-movil-items">
+                <a href="#" class="menu-movil-item"><i class='bx bxs-home'></i> Home</a>
+                <a href="#" class="menu-movil-item"><i class='bx bxs-dog'></i> About Petdopcion</a>
+                <a href="#" class="menu-movil-item"><i class='bx bx-support'></i> Contact us</a>
+                <a href="#" class="menu-movil-item"><i class='bx bxs-info-circle' ></i> Blog</a>
+                <a href="./login.html" class="menu-movil-item"><i class='bx bxs-user'></i> Login</a>
+            </main>
+        </div>
+    </div>
+
+    <header class="content-menu" id="menu">
+        <div class="menu-logo">
+            <img src="https://i.ibb.co/sQgnYR9/logo1.png">
+        </div>
+        <div class="menu-nav">
+            <a href="#" class="menu-nav-item">Home</a>
+            <a href="#" class="menu-nav-item">About Petdopcion</a>
+            <a href="#" class="menu-nav-item">Contact us</a>
+            <a href="#" class="menu-nav-item">Blog</a>
+            <a href="./login.html" class="menu-nav-item">Login</a>
+        </div>
+        <button class="menu-nav-item-movil" onclick="abrirMenu()"><i class="bx bx-menu"></i></button>
+    </header>
+
+    <!---
+    position: relative;
+    z-index: 10;
+    margin-bottom: 100vh;
+    background: #fff;
+    border-bottom: 1px solid #dddddd;--->
+
+    <!---
+    <div style="position: relative; z-index: 10; margin-bottom: 75vh; background: #fff;">
+    </div>--->
+
+    <div class="content-vh100">
+        <div class="div-banner">
+            <section class="banner-img">
+                <div class="banner-img-main">
+                    <img src="https://i.ibb.co/L8N6qrF/dog.jpg" alt="">
+                </div>
+            </section>
+            <section class="banner-text">
+                <header>
+                    <h5>Veterinary clinic</h5>
+                </header>
+                <main>
+                    <div class="banner-text-main">
+                        <p id="textAnima">Keep your <b>beloved</b> pets <b>healthy</b>.</p>
+                    </div>
+                    <div class="banner-text-second">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates accusamus enim libero
+                            nostrum fugit autem labore molestiae, dolorum id totam, exercitationem dignissimos neque,
+                            similique corporis iure illo laborum ex!</p>
+                    </div>
+                </main>
+                <footer>
+                    <input type="submit" value="Read more" class="btnsStatic">
+                </footer>
+            </section>
+        </div>
+        <div class="redes">
+            <div class="redes-img">
+                <span>Follow us</span>
+            </div>
+            <div class="animate__animated animate__fadeInRight animate__delay-3s">
+                <a href=""><i class='bx bxl-instagram-alt'></i></a>
+                <a href=""><i class='bx bxl-facebook'></i></a>
+                <a href=""><i class='bx bxl-twitter'></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="content-vh75" id="limite">
+        <div class="content-padding">
+            <div class="div-about">
+                <section class="main-section-text">
+                    <header>
+                        <h5 class="subtitulos">A Few Words <b>About Us</b></h5>
+                    </header>
+                    <main>
+                        <p class="wow parrafos">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates
+                            minus sequi autem delectus, aliquam et est error repudiandae fuga accusamus?</p>
+                        <p class="wow parrafos">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia
+                            expedita voluptates deserunt, repellendus provident quisquam aspernatur dicta explicabo
+                            numquam similique!</p>
+                    </main>
+                    <footer>
+                        <input type="submit" value="Read more" class="btnsStatic">
+                    </footer>
+                </section>
+                <section class="main-section-img">
+                    <img class="wow" src="https://i.ibb.co/z4tN3gV/main-dog.png" alt="" id="img-dog">
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-vh75" style="background:#f7f7f7c4;">
+        <div class="content-padding">
+            <div class="div-information">
+                <section class="div-content-img">
+                    <img class="wow" src="https://i.ibb.co/NrZMQBy/main-cat.png" alt="" id="img-cat">
+                </section>
+                <section class="div-content-text">
+                    <header>
+                        <h5 class="subtitulos">All the best for your <b>pet</b></h5>
+                    </header>
+                    <main class="text-main">
+                        <div>
+                            <header>
+                                <h4 class="wow"><i class='bx bxs-heart'></i> Health</h4>
+                            </header>
+                            <main>
+                                <p class="wow parrafos">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus
+                                    nemo, neque consectetur blanditiis dolor delectus.</p>
+                            </main>
+                        </div>
+                        <div>
+                            <header>
+                                <h4 class="wow"><i class='bx bxs-certification'></i> Profesional</h4>
+                            </header>
+                            <main>
+                                <p class="wow parrafos">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus
+                                    nemo, neque consectetur blanditiis dolor delectus.</p>
+                            </main>
+                        </div>
+                        <div>
+                            <header>
+                                <h4 class="wow"><i class='bx bx-shield-quarter'></i> Secure</h4>
+                            </header>
+                            <main>
+                                <p class="wow parrafos">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus
+                                    nemo, neque consectetur blanditiis dolor delectus.</p>
+                            </main>
+                        </div>
+                        <div>
+                            <header>
+                                <h4 class="wow"><i class='bx bx-money'></i> Low cost</h4>
+                            </header>
+                            <main>
+                                <p class="wow parrafos">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus
+                                    nemo, neque consectetur blanditiis dolor delectus.</p>
+                            </main>
+                        </div>
+                    </main>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-vh75" style="border-style: none;">
+        <div class="content-padding">
+            <div class="div-slider">
+                <header>
+                    <h5 class="wow subtitulos">The <b>most</b> sold</h5>
+                    <a href="" class="wow">look at the store</a>
+                </header>
+                <div class="slider">
+                    <div class="item">
+                        <div class="item-inner">
+                            <img src="https://i.ibb.co/FV6SsxY/comida1.png" alt="">
+                            <h5>Pedigree</h5>
+                            <span>$ 260</span>
+                            <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-inner">
+                            <img src="https://i.ibb.co/w79NdK7/comida2.png" alt="">
+                            <h5>Purina</h5>
+                            <span>$ 180</span>
+                            <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-inner">
+                            <img src="https://i.ibb.co/nkVgKwH/comida3.png" alt="">
+                            <h5>Minino</h5>
+                            <span>$ 220</span>
+                            <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-inner">
+                            <img src="https://i.ibb.co/sFR8mJ4/comida4.png" alt="">
+                            <h5>Hills</h5>
+                            <span>$ 195</span>
+                            <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-inner">
+                            <img src="https://i.ibb.co/5v5x7HM/comida5.png" alt="">
+                            <h5>Nupec</h5>
+                            <span>$ 320</span>
+                            <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-vh75">
+        <div class="content-padding">
+            <div class="div-sponsors">
+                <header>
+                    <h5 class="subtitulos">Sponsors</h5>
+                </header>
+                <div class="sponsors">
+                    <section class="wow"><img src="https://i.ibb.co/LZLFKSK/logohills.png" alt=""></section>
+                    <section class="wow"><img src="https://i.ibb.co/xHKR8JQ/logopedigree.png" alt=""></section>
+                    <section class="wow"><img src="https://i.ibb.co/jJFZj7f/logopurina.png" alt=""></section>
+                    <section class="wow"><img src="https://i.ibb.co/m020Nrc/logonupec.png" alt=""></section>
+                    <section class="wow"><img src="https://i.ibb.co/PZQ5Hmk/logominino.png" alt=""></section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+        </script>
+
+    <script>
+        $(".slider").slick({
+            centerMode: true,
+            slidesToShow: 4,
+            autoplay: true,
+            autoplaySpeed: 3000,
+        })
+    </script>
+    <script src="/js/menu.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,487 @@
+/* PANTALLA DE CARGA */
+#divCarga{
+    position: fixed;
+    z-index: 1000;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.5s ease;
+}
+#divCarga #top{
+    height: 50%;
+    background: rgb(255, 255, 255);
+    width: 100%;
+    position: absolute;
+    transition: all 0.8s ease;
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+}
+#divCarga #top img {
+    animation: anim-titulos 2s infinite alternate;
+    transform: translateY(-10px);
+    height: 230px;
+}
+@keyframes anim-titulos{
+    100%{
+        transform: translateY(0px);
+    }
+}
+#divCarga #top #content-bar{
+    height: 20px;
+    background: rgb(206, 206, 206);
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+#divCarga #top #content-bar #bar{
+    background: linear-gradient(to right, #fbd3e9, #bb377d);
+    height: 100%;
+    width: 1%;
+    border-radius: 6px;
+}
+#divCarga #bottom{
+    height: 50%;
+    background: rgb(255, 255, 255);
+    width: 100%;
+    transition: all 0.8s ease;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+}
+#divCarga #bottom h5{
+    margin: 20px;
+    font-family: 'Bayon', sans-serif;
+    font-size: 42px;
+    color: rgb(141 141 141);
+}
+/* MENU-MOVIL */
+.content-menu-movil{
+    background-color: rgba(0, 0, 0, 0.247);
+    width: 100%;
+    position: fixed;
+    height: 100%;
+    z-index: 1;
+    visibility: hidden;
+    z-index: 100;
+}
+.content-menu-movil .menu-movil{
+    width: 0%;
+    height: 100%;
+    background-color: #ffffff;
+    max-width: 300px;
+    position: relative;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+.content-menu-movil .menu-movil .menu-movil-logo{
+    display: flex;
+    justify-content: center;
+}
+.content-menu-movil .menu-movil .menu-movil-logo img{
+    height: 80px;
+}
+.content-menu-movil .menu-movil .menu-movil-items{
+    margin-top: 40px;
+}
+.content-menu-movil .menu-movil .menu-movil-items a{
+    display: block;
+    padding: 10px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 5px;
+    color: #000000;
+    font-size: 18px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+.content-menu-movil .menu-movil .menu-movil-items a:hover{
+    background: rgb(240, 240, 240);
+}
+
+/* MENU-PC */
+.content-menu{
+    background: #f9f9f9;
+    width: 100%;
+    height: 80px;
+    align-items: center;
+    /* border-bottom: 1px solid #dddddd; */
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.5s ease;
+}
+.content-menu .menu-logo img{
+    z-index: 1;
+    height: 80px;
+}
+.content-menu .menu-nav .menu-nav-item{
+    padding: 5px 14px;
+    cursor: pointer;
+    margin: 5px;
+    color: #000000;
+    font-size: 16.5px;
+    border-radius: 8px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+.content-menu .menu-nav .menu-nav-item:hover{
+    box-shadow: 2px 2px 2px 1px rgb(255 255 255 / 17%);
+}
+.content-menu .menu-nav-item-movil{
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: none;
+    background-color: rgba(0, 0, 0, 0);
+    display: none;
+    position: absolute;
+    right: 0;
+    font-size: 26px;
+} 
+/*------------------------- ESTILOS GLOBALES */
+
+/* TITULOS */
+.titulosStatic{
+    font-size: 66px;
+    font-family: 'Bayon', sans-serif;
+    font-weight: 500;
+}
+/* SUBTITULOS */
+.subtitulos{
+    font-size: 30px;
+    font-family: 'Bayon', sans-serif;
+    font-weight: 500;
+}
+.subtitulos b{
+    color: #ef7da1;
+}
+/* PARRAFOS */
+.parrafos{
+    color: rgb(141 141 141);
+    font-weight: 350;
+    animation: slideInDown;
+    animation-duration: 1s; 
+}
+/* BOTONES */
+.btnsStatic{
+    color: #fff;
+    border: none;
+    background: #ef7da1;
+    padding: 6px 40px;
+    font-family: 'Bayon', sans-serif;
+    box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
+    animation: bounceInDown;
+    animation-duration: 1s;
+}
+
+
+/* ESPACIO */
+.content-vh100{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+.content-vh75{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 75vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* PADDING */
+.content-padding{
+    max-width: 1200px;
+    margin: 20px;
+}
+
+
+/* -------DIV-BANNER */
+.div-banner{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 15px;
+    min-height: 100vh;
+    align-items: center;
+    background: #f7f7f7c4;
+}
+.div-banner .content-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.div-banner .banner-img{
+    position: relative;
+}
+.div-banner .banner-img .banner-img-main{
+    background: linear-gradient(to top, #ffbad0, #ff858e);
+}
+.div-banner .banner-img .banner-img-main img{
+    width: 100%;
+}
+.div-banner .banner-text header h5{
+    font-size: 24px;
+    color: #ef7da1;
+    border-bottom: 1px solid #f1f1f1;
+    width: 300px;
+    font-family: 'Bayon', sans-serif;
+}
+.div-banner .banner-text{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px;
+}
+.div-banner .banner-text main .banner-text-main{
+    overflow: hidden;
+}
+.div-banner .banner-text main .banner-text-main p{
+    font-size: 66px;
+    font-family: 'Bayon', sans-serif;
+    font-weight: 500;
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: all 0.5s ease;
+    line-height: 1;
+}
+.div-banner .banner-text main .banner-text-main p b{
+    color: #ef7da1;
+    font-family: 'Bayon', sans-serif;
+}
+.div-banner .banner-text main .banner-text-second p{
+    color: rgb(141 141 141);
+    font-weight: 350;
+}
+.redes{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0px 16px;
+    overflow: hidden;
+}
+.redes .redes-img{
+    display: flex;
+    justify-content: center;
+}
+.redes div a{
+    font-size: 32px;
+    color: rgb(255, 255, 255);
+    background: #ef7da1;
+    transition: all 0.5s ease;
+}
+.redes div a:hover{
+    color: #e7e7e7;
+    transform: translateY(20px)
+}
+
+/* --------------DIV-ABOUT */
+.div-about{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    max-width: 1200px;
+    margin: 20px;
+    gap: 20px;
+}
+.div-about .main-section-text{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.div-about .main-section-text main{
+    overflow: hidden;
+}
+.div-about .main-section-img{
+    overflow: hidden;
+}
+.div-about .main-section-img img{
+    width: 100%;
+    max-width: 70%;
+    transition: all 0.8s ease;
+    animation: fadeInRight;
+    animation-duration: 1s; 
+}
+
+/* -----------DIV-INFORMATION */
+.div-information{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    max-width: 1200px;
+    margin: 20px;
+}
+.div-information .div-content-img{
+    overflow: hidden;
+}
+.div-information .div-content-img img{
+    width: 100%;
+    transition: all 0.8s ease;
+    animation: fadeInLeft;
+    animation-duration: 1s; 
+}
+.div-information .div-content-text .text-main{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: 20px;
+}
+.div-information .div-content-text .text-main div header h4{
+    font-size: 26px;
+    font-family: 'Bayon', sans-serif;
+    font-weight: 500;
+    animation: slideInDown;
+    animation-duration: 1s; 
+}
+.div-information .div-content-text .text-main div header h4 i{
+    color: #ef7da1;
+}
+/* ------------DIV-TIENDA */
+.div-slider{
+    border-style: none;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+.div-slider header{
+    display: flex;
+    justify-content: center;
+    grid-gap: 20px;
+    align-items: center;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.div-slider header a{
+    color: #fff;
+    border: none;
+    background: #ef7da1;
+    font-family: 'Bayon', sans-serif;
+    animation: bounceInRight;
+    animation-duration: 1s;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 6px;
+}
+.div-slider .slider{
+    max-width: 850px;
+}
+.slick-slide img{
+    margin: 0 auto;
+    height: 128px;
+    border: 3px solid #fff;
+    margin-bottom: 16px;
+}
+.item{
+    padding: 10px;
+    border-radius: 18px;
+    border: 1px solid #e1e1e1;
+    outline: none;
+    margin: 6px;
+    max-width: 250px;
+}
+.item .item-inner h5{
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0px;
+    color: #7e7e7e;
+}
+.item .item-inner span{
+    font-size: 16px;
+    font-weight: 600;
+    color: #ef7da1;
+}
+.item .item-inner p{
+    font-size: 14px;
+    font-weight: 400;
+    color: #7e7e7e;
+}
+.slick-arrow{
+    position: absolute;
+    bottom: 0;
+    z-index: 99;
+    background: #ef7da1;
+    border: 1px solid #f1f1f1;
+    color: #fff;
+    padding: 4px 15px;
+    border-radius: 6px;
+    width: 100px;
+    outline: none;}
+.slick-prev{
+    left: 0%;
+    content:"<";
+    margin-top: 10px;
+}
+.slick-next{
+    right: 0%;
+    content:">"
+}
+
+/* ------DIV-SPONSORS */
+.div-sponsors .sponsors{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    max-width: 900px;
+    overflow: hidden;
+}
+.div-sponsors .sponsors section{
+    border: 1px solid #e7e7e7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border-radius: 6px;
+    animation: fadeInUp;
+    animation-duration: 1s;
+}
+.div-sponsors .sponsors section:hover{
+    background: #f4f4f4;
+}
+.div-sponsors .sponsors section img{
+    width: 100%;
+}
+@media screen and (max-width:800px) {
+    .content-menu .menu-nav{
+        display: none;
+    }
+    .content-menu .menu-nav-item-movil{
+        display: block;
+    }
+    .div-banner{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .div-banner .banner-text main .banner-text-main p{
+        font-size: 46px;
+    }
+    .div-about{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .div-information{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .slick-prev{
+        left: 39%;
+        content:"<"
+    }
+    .slick-next{
+        right: 37%;
+        content:">"
+    }
+    .div-sponsors .sponsors{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        overflow: hidden;
+    }
+}
