@@ -8,19 +8,17 @@ window.addEventListener('scroll',function()
     console.log(posicionobj1);
 
     let inicio = window.innerHeight/2;
-    if(posicionobj1 < inicio)
-    {
+    if(posicionobj1 < inicio){
         menu.style.background='#ef7da1';
-        menu.style.height='100px';
+        menu.style.height='65px';
         for (let i = 0; i < menuoptions.length; i++) {
             menuoptions[i].style.color="#fff";
             
         }
-    }
-    else
+    }else
     {
         menu.style.background='#f9f9f9';
-        menu.style.height='80px';
+        menu.style.height='100px';
         for (let i = 0; i < menuoptions.length; i++) {
             menuoptions[i].style.color="#000";
             
